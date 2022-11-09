@@ -1,0 +1,23 @@
+body {
+  background-color: darkgreen;
+  color: #072F0F;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.block {
+  border: 2px solid black;
+  outline: green solid 20px;
+  margin: 10px;
+  margin-left: 100px;
+  margin-right: 100px;  
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  background-color: seagreen;
+  position: relative
+}
+
