@@ -8,6 +8,10 @@ h1 {
   font-size: 40px;
 }
 
+a {
+  color: #072F0F;
+}
+
 .block {
   border: 2px solid black;
   outline: green solid 20px;
