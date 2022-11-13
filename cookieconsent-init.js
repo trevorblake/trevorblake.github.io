@@ -10,11 +10,23 @@ let lastererererGIF = '';
 function listCookies() {
     let chocolateChips = document.cookie.split(';');
     let s = '';
-    for (let i = 1; i <= chocolateChips.length; i++) {
-        s += i + ': ' + chocolateChips[i-1] + "\n\n";
+    let tableRef = document.getElementById("cookieList");
+    let rowCount = cookieList.rows.length;
+
+    for (let x=rowCount-1; x>0; x--) {
+        cookieList.deleteRow(x);
     }
+
     document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
-    document.getElementById("cookieList").innerHTML = s;
+    
+    for (let i = 1; i <= chocolateChips.length; i++) {
+        s += i + ': ' + chocolateChips[i-1] + "\n";
+        let newRow = tableRef.insertRow(-1);
+        let newCell = newRow.insertCell(0);
+        let newText = document.createTextNode(s);
+        newCell.appendChild(newText);
+    }
+
     document.getElementById("cookieInfo").style.visibility = "visible";
 }
 
@@ -41,6 +53,12 @@ function randomGIF() {
                 'https://hookagency.com/wp-content/uploads/2016/03/when-boss-clients-setting-unrealistic-goals-expectations.gif',
                 'https://media.tenor.com/gTcTYGzF9T4AAAAC/wee-woo-patrick-star.gif'];           
     let randomNumber = Math.floor(Math.random() * gifs.length);
+    let counter = 0;
+    if(getCookie("backgroundCounter") != null)
+    {
+        counter = getCookie("backgroundCounter");
+    }
+
     if(lastGIF == randomNumber || lasterGIF == randomNumber || lastererGIF == randomNumber || 
         lasterererGIF == randomNumber || lastererererGIF == randomNumber)
     {
@@ -55,6 +73,8 @@ function randomGIF() {
         let bgImg = 'url(' + gifs[randomNumber] + ')';           
         document.body.style.backgroundImage = bgImg;
         setCookie("backgroundCookie", bgImg, 180);
+        counter++;
+        setCookie("backgroundCounter", counter, 180);
     }
 
 }
