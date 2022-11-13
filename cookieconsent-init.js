@@ -8,7 +8,6 @@ function listCookies() {
     for (let i = 1; i <= chocolateChips.length; i++) {
         s += i + ' ' + chocolateChips[i-1] + "\n";
     }
-    console.log(document.cookie);
     document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
     document.getElementById("cookieList").innerHTML = s;
 }
