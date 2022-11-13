@@ -15,6 +15,16 @@ function listCookies() {
     }
     document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
     document.getElementById("cookieList").innerHTML = s;
+    document.getElementById("cookieInfo").style.visibility = "visible";
+}
+
+function hideCookies() {
+    document.getElementById("cookieInfo").style.visibility = "hidden";
+}
+
+function getCookieBackground() {
+    let bg = getCookie("backgroundCookie");
+    document.body.style.backgroundImage = 'url(' + bg + ')';
 }
 
 function randomGIF() {
@@ -44,7 +54,7 @@ function randomGIF() {
         lastGIF = randomNumber;
         let bgImg = 'url(' + gifs[randomNumber] + ')';           
         document.body.style.backgroundImage = bgImg;
-        setCookie("background", document.body.style.backgroundImage = gifs[randomNumber], 180);
+        setCookie("backgroundCookie", document.body.style.backgroundImage = gifs[randomNumber], 180);
     }
 
 }
