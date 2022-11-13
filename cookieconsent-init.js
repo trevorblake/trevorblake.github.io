@@ -9,7 +9,6 @@ let lastererererGIF = '';
 //list cookies
 function listCookies() {
     let chocolateChips = document.cookie.split(';');
-    let s = '';
     let tableRef = document.getElementById("cookieList");
     let rowCount = cookieList.rows.length;
 
@@ -20,6 +19,7 @@ function listCookies() {
     document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
     
     for (let i = 1; i <= chocolateChips.length; i++) {
+        let s = '';
         s += i + ': ' + chocolateChips[i-1] + "\n";
         let newRow = tableRef.insertRow(-1);
         let newCell = newRow.insertCell(0);
