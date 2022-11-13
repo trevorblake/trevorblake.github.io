@@ -77,7 +77,7 @@ function randomGIF() {
         counter++;
         setCookie("backgroundCounter", counter, 180);
     }
-
+    listCookies();
 }
 
 function setCookie(name, value, days) {
