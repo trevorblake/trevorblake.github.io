@@ -24,7 +24,7 @@ function hideCookies() {
 
 function setCookieBackground() {
     let bg = getCookie("backgroundCookie");
-    document.body.style.backgroundImage = 'url(' + bg + ')';
+    document.body.style.backgroundImage = "'" + bg + "'";
 }
 
 function randomGIF() {
