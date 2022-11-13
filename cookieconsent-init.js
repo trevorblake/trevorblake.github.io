@@ -11,6 +11,7 @@ function listCookies() {
     let chocolateChips = document.cookie.split(';');
     let tableRef = document.getElementById("cookieList");
     let rowCount = cookieList.rows.length;
+    let s = '';
 
     for (let x=rowCount-1; x>0; x--) {
         cookieList.deleteRow(x);
@@ -19,7 +20,7 @@ function listCookies() {
     document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
     
     for (let i = 1; i <= chocolateChips.length; i++) {
-        let s = '';
+        s = '';
         s += i + ': ' + chocolateChips[i-1] + "\n";
         let newRow = tableRef.insertRow(-1);
         let newCell = newRow.insertCell(0);
