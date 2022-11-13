@@ -11,7 +11,7 @@ function listCookies() {
     let chocolateChips = document.cookie.split(';');
     let s = '';
     for (let i = 1; i <= chocolateChips.length; i++) {
-        s += i + ': ' + chocolateChips[i-1] + "\n";
+        s += i + ': ' + chocolateChips[i-1] + "\n\n";
     }
     document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
     document.getElementById("cookieList").innerHTML = s;
@@ -22,7 +22,7 @@ function hideCookies() {
     document.getElementById("cookieInfo").style.visibility = "hidden";
 }
 
-function getCookieBackground() {
+function setCookieBackground() {
     let bg = getCookie("backgroundCookie");
     document.body.style.backgroundImage = 'url(' + bg + ')';
 }
@@ -54,7 +54,7 @@ function randomGIF() {
         lastGIF = randomNumber;
         let bgImg = 'url(' + gifs[randomNumber] + ')';           
         document.body.style.backgroundImage = bgImg;
-        setCookie("backgroundCookie", document.body.style.backgroundImage = gifs[randomNumber], 180);
+        setCookie("backgroundCookie", document.body.style.backgroundImage, 180);
     }
 
 }
