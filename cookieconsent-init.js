@@ -6,9 +6,11 @@ function listCookies() {
     let chocolateChips = document.cookie.split(';');
     let s = '';
     for (let i = 1; i <= chocolateChips.length; i++) {
-        s += i + ' ' + decodeURIComponent(chocolateChips[i-1]) + "\n";
+        s += i + ' ' + chocolateChips[i-1] + "\n";
     }
-    document.getElementById("cookieList").value = "Here is information about your cookies:\n" + s;
+    console.log(document.cookie);
+    document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
+    document.getElementById("cookieList").innerHTML = s;
 }
 
 // run plugin with your configuration
@@ -30,7 +32,7 @@ cc.run({
     cookie_domain: location.hostname,       // default: current domain
     cookie_path: '/',                       // default: root
     cookie_same_site: 'Lax',                // default: 'Lax'
-    use_rfc_cookie: false,                  // default: false
+    use_rfc_cookie: true,                  // default: false
     revision: 0,                            // default: 0
 
     onFirstAction: function(user_preferences, cookie){

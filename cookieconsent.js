@@ -29,8 +29,8 @@
             'cookie_domain': window.location.hostname,       // default: current domain
             'cookie_path': '/',
             'cookie_same_site': 'Lax',
-            'use_rfc_cookie': false,
-            'autoclear_cookies': true,
+            'use_rfc_cookie': true,
+            'autoclear_cookies': false,
             'revision': 0,
             'script_selector': 'data-cookiecategory'
         };
