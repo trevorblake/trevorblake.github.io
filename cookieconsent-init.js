@@ -1,6 +1,16 @@
 // obtain plugin
 var cc = initCookieConsent();
 
+//list cookies
+function listCookies() {
+    let chocolateChips = document.cookie.split(';');
+    let s = '';
+    for (let i = 1; i <= chocolateChips.length; i++) {
+        s += i + ' ' + decodeURIComponent(chocolateChips[i-1]) + "\n";
+    }
+    document.getElementById("cookieList").value = "Here is information about your cookies:\n" + s;
+}
+
 // run plugin with your configuration
 cc.run({
     current_lang: 'en',

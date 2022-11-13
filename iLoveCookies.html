@@ -1,7 +1,7 @@
 <html>
   <head>
-    <!-- head content -->
-    <!-- Deferred CSS loading (recommended) -->
+    <script defer src="cookieconsent.js"></script>
+    <script defer src="cookieconsent-init.js"></script>
     <link
       rel="stylesheet"
       href="cookieconsent.css"
@@ -10,8 +10,8 @@
     />
   </head>
   <body>
-    <!-- body content -->
-    <script defer src="cookieconsent.js"></script>
-    <script defer src="cookieconsent-init.js"></script>
+    <button onClick="listCookies()">List Cookies?</button><br />
+    <h1></h1>
+    <p id="cookieList"></p>
   </body>
 </html>
