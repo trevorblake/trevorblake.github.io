@@ -52,9 +52,9 @@ function randomGIF() {
         lastererGIF = lasterGIF;
         lasterGIF = lastGIF;
         lastGIF = randomNumber;
-        let bgImg = gifs[randomNumber];           
-        document.body.style.backgroundImage = "'" + bgImg + "'";
-        setCookie("backgroundCookie", document.body.style.backgroundImage, 180);
+        let bgImg = 'url(' + gifs[randomNumber] + ')';           
+        document.body.style.backgroundImage = bgImg;
+        setCookie("backgroundCookie", document.body.style.backgroundImage = gifs[randomNumber], 180);
     }
 
 }
