@@ -21,14 +21,18 @@ function listCookies() {
     
     for (let i = 1; i <= chocolateChips.length; i++) {
         s = '';
-        s += i + ': ' + chocolateChips[i-1] + "\n";
+        s += chocolateChips[i-1] +"\n";
         let newRow = tableRef.insertRow(-1);
         let newCell = newRow.insertCell(0);
         let newText = document.createTextNode(s);
         newCell.appendChild(newText);
     }
+}
 
+function showCookies() {
+    listCookies();
     document.getElementById("cookieInfo").style.visibility = "visible";
+
 }
 
 function hideCookies() {

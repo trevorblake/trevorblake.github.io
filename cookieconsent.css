@@ -6,8 +6,7 @@ body{
     }
 
 divbod{
-    display: table;
-    
+    display: block;
     visibility: hidden;
     margin: 0px auto 0px auto;
     padding: 5px;
@@ -17,7 +16,8 @@ divbod{
 }
 
 td{
-    word-wrap: break-word;
+    display: inline-block;
+    word-break: break-word;
 }
 
 h1{
