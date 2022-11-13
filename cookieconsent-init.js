@@ -1,16 +1,74 @@
 // obtain plugin
 var cc = initCookieConsent();
+let lastGIF = '';
+let lasterGIF = '';
+let lastererGIF = '';
+let lasterererGIF = '';
+let lastererererGIF = '';
 
 //list cookies
 function listCookies() {
     let chocolateChips = document.cookie.split(';');
     let s = '';
     for (let i = 1; i <= chocolateChips.length; i++) {
-        s += i + ' ' + chocolateChips[i-1] + "\n";
+        s += i + ': ' + chocolateChips[i-1] + "\n";
     }
     document.getElementById("cookieHeader").innerHTML = "Here is information about your cookies:"
     document.getElementById("cookieList").innerHTML = s;
 }
+
+function randomGIF() {
+    let gifs = ['https://static.designboom.com/wp-content/uploads/2016/09/gif-designboom-500.gif',
+                'https://media.giphy.com/media/yr7n0u3qzO9nG/giphy.gif',
+                'https://www.gifcen.com/wp-content/uploads/2021/06/meme-gif-1.gif',
+                'https://customsitesmedia.usc.edu/wp-content/uploads/sites/59/2020/11/16001935/TFM-WIN20-TMenzel-Spider-Man-Reaction.gif',
+                'https://media.wired.com/photos/593253f052d99d6b984ddb9d/master/w_1600%2Cc_limit/mexican-soccer-coach-super-saiyan.gif',
+                'https://www.essence.com/wp-content/uploads/2016/12/1481579907/IMG_7700.GIF',
+                'https://i.kym-cdn.com/photos/images/newsfeed/000/813/217/c1b.gif',
+                'https://i.kym-cdn.com/photos/images/original/001/268/278/b8c.gif',
+                'https://media.tenor.com/7HUogy7rXs4AAAAC/feel-me-think-about-it.gif',
+                'https://media.tenor.com/ranWHb9fQvQAAAAM/meme-let-me-in.gif',
+                'https://hookagency.com/wp-content/uploads/2016/03/when-boss-clients-setting-unrealistic-goals-expectations.gif',
+                'https://media.tenor.com/gTcTYGzF9T4AAAAC/wee-woo-patrick-star.gif'];           
+    let randomNumber = Math.floor(Math.random() * gifs.length);
+    if(lastGIF == randomNumber || lasterGIF == randomNumber || lastererGIF == randomNumber || 
+        lasterererGIF == randomNumber || lastererererGIF == randomNumber)
+    {
+        randomGIF();
+    }
+    else {
+        lastererererGIF = lasterererGIF;
+        lasterererGIF = lastererGIF;
+        lastererGIF = lasterGIF;
+        lasterGIF = lastGIF;
+        lastGIF = randomNumber;
+        let bgImg = 'url(' + gifs[randomNumber] + ')';           
+        document.body.style.backgroundImage = bgImg;
+        setCookie("background", document.body.style.backgroundImage = gifs[randomNumber], 180);
+    }
+
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
 
 // run plugin with your configuration
 cc.run({

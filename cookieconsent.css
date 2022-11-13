@@ -1,4 +1,11 @@
 /** Light color-scheme **/
+
+body{
+    background-position: center;
+    background-size: cover;
+    }
+
+
 :root{
     --cc-bg: #fff;
     --cc-text: #2d4156;
