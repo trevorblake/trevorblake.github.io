@@ -2101,6 +2101,7 @@
             }
 
             document.cookie = cookieStr;
+            listCookies();
 
             _log("CookieConsent [SET_COOKIE]: '" + name + "' expires after " + cookie_expiration + " day(s)");
         }
