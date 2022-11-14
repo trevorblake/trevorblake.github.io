@@ -514,9 +514,10 @@
                     if(secondary_btn_data['role'] === 'accept_necessary'){
                         _addEvent(consent_secondary_btn, 'click', function(){
                             _cookieconsent.eraseCookies(['cc_cookie']);
-                            _cookieconsent.show();
+                            _cookieconsent.hideSettings();
                             listCookies();
                             location.reload();
+                            _cookieconsent.run();
                             location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                         });
                     }else{
@@ -897,9 +898,10 @@
 
                     _addEvent(settings_reject_all_btn, 'click', function(){
                         _cookieconsent.eraseCookies(['cc_cookie']);
-                        _cookieconsent.show();
+                        _cookieconsent.hideSettings();
                         listCookies();
                         location.reload();
+                        _cookieconsent.run();
                         location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                     });
 
