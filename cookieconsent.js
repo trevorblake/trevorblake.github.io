@@ -520,7 +520,7 @@
                             listCookies();
                             window.location.reload(true);
                             //_cookieconsent.run();
-                            window.open("https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png", "_blank");
+                            window.open("https://media.tenor.com/FseuxhCywF4AAAAC/frodo-keep-your-secrets.gif", "_blank");
                             //location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                         });
                     }else{
@@ -912,7 +912,7 @@
                         _cookieconsent.show();
                         _cookieconsent.hideSettings();
                         //_cookieconsent.run();
-                        window.open("https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png", "_blank");
+                        window.open("https://media.tenor.com/FseuxhCywF4AAAAC/frodo-keep-your-secrets.gif", "_blank");
                         //location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                     });
 
