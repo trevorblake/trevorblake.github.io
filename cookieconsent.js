@@ -907,10 +907,10 @@
                         _cookieconsent.eraseCookies(['cc_cookie']);
                         _cookieconsent.eraseCookies(['backgroundCounter']);
                         _cookieconsent.eraseCookies(['backgroundCookie']);
+                        listCookies();
                         _cookieconsent.hideSettings();
                         _cookieconsent.accept([]);
                         _cookieconsent.show();
-                        listCookies();
                         window.location.reload(true);
                         //_cookieconsent.run();
                         location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
@@ -935,8 +935,9 @@
                 _addEvent(settings_save_btn, 'click', function(){
                     _cookieconsent.hideSettings();
                     _cookieconsent.hide();
-                    _cookieconstent.accept([]);
+                    _cookieconsent.accept([]);
                     _cookieconsent.accept('all');
+                    listCookies();
                 });
             }
 
@@ -2065,8 +2066,8 @@
             }
 
             _eraseCookies(cookies, _path, domains);
-            window.location.reload(true);
             listCookies();
+            window.location.reload(true);
         }
 
         /**
