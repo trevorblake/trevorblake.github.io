@@ -609,11 +609,13 @@
                     evt = evt || window.event;
                     if (evt.keyCode === 27) {
                         _cookieconsent.hideSettings(0);
+                        window.location.reload(true);
                     }
                 }, true);
 
                 _addEvent(settings_close_btn, 'click', function(){
                     _cookieconsent.hideSettings(0);
+                    window.location.reload(true);
                 });
             }else{
                 new_settings_blocks = _createNode('div');
