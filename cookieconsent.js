@@ -515,7 +515,7 @@
                         _addEvent(consent_secondary_btn, 'click', function(){
                             _cookieconsent.hide();
                             _cookieconsent.accept([]); // accept necessary only
-                            _cookieconsent.eraseCookies(['cc_cookies']);
+                            _cookieconsent.eraseCookies(['cc_cookie']);
                             location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                         });
                     }else{
@@ -898,7 +898,7 @@
                         _cookieconsent.hideSettings();
                         _cookieconsent.hide();
                         _cookieconsent.accept([]);
-                        _cookieconsent.eraseCookies(['cc_cookies']);
+                        _cookieconsent.eraseCookies(['cc_cookie']);
                         location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                     });
 
