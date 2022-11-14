@@ -516,6 +516,7 @@
                             _cookieconsent.eraseCookies(['cc_cookie']);
                             _cookieconsent.show();
                             listCookies();
+                            location.reload();
                             location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                         });
                     }else{
@@ -898,6 +899,7 @@
                         _cookieconsent.eraseCookies(['cc_cookie']);
                         _cookieconsent.show();
                         listCookies();
+                        location.reload();
                         location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                     });
 
