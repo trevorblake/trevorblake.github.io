@@ -905,9 +905,10 @@
                     settings_reject_all_btn.className = 'c-bn';
 
                     _addEvent(settings_reject_all_btn, 'click', function(){
-                        _cookieconsent.eraseCookies(['cc_cookie']);
+                        _cookieconsent.accept([]);
                         _cookieconsent.eraseCookies(['backgroundCounter']);
                         _cookieconsent.eraseCookies(['backgroundCookie']);
+                        _cookieconsent.eraseCookies(['cc_cookie']);
                         listCookies();
                         _cookieconsent.show();
                         _cookieconsent.hideSettings();
