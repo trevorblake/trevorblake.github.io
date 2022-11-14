@@ -908,10 +908,9 @@
                         _cookieconsent.eraseCookies(['backgroundCounter']);
                         _cookieconsent.eraseCookies(['backgroundCookie']);
                         listCookies();
-                        _cookieconsent.hideSettings();
                         _cookieconsent.accept([]);
                         _cookieconsent.show();
-                        window.location.reload(true);
+                        _cookieconsent.hideSettings();
                         //_cookieconsent.run();
                         location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                     });
