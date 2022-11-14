@@ -520,7 +520,8 @@
                             listCookies();
                             window.location.reload(true);
                             //_cookieconsent.run();
-                            location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
+                            window.open("https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png", "_blank");
+                            //location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                         });
                     }else{
                         _addEvent(consent_secondary_btn, 'click', function(){
@@ -908,11 +909,11 @@
                         _cookieconsent.eraseCookies(['backgroundCounter']);
                         _cookieconsent.eraseCookies(['backgroundCookie']);
                         listCookies();
-                        _cookieconsent.accept([]);
                         _cookieconsent.show();
                         _cookieconsent.hideSettings();
                         //_cookieconsent.run();
-                        location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
+                        window.open("https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png", "_blank");
+                        //location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                     });
 
                     settings_inner.className = "bns-t";
