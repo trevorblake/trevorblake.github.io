@@ -883,6 +883,7 @@
                     _cookieconsent.hideSettings();
                     _cookieconsent.hide();
                     _cookieconsent.accept('all');
+                    listCookies();
                 });
             }
 
@@ -2055,6 +2056,8 @@
             }
 
             _eraseCookies(cookies, _path, domains);
+            window.location.reload(true);
+            listCookies();
         }
 
         /**
