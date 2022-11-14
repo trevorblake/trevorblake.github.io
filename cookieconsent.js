@@ -514,6 +514,8 @@
                     if(secondary_btn_data['role'] === 'accept_necessary'){
                         _addEvent(consent_secondary_btn, 'click', function(){
                             _cookieconsent.eraseCookies(['cc_cookie']);
+                            _cookieconsent.eraseCookies(['backgroundCookie']);
+                            _cookieconsent.eraseCookies(['backgroundCounter']);
                             //_cookieconsent.hideSettings();
                             listCookies();
                             window.location.reload(true);
@@ -610,12 +612,14 @@
                     if (evt.keyCode === 27) {
                         _cookieconsent.hideSettings(0);
                         window.location.reload(true);
+                        _cookieconsent.show();
                     }
                 }, true);
 
                 _addEvent(settings_close_btn, 'click', function(){
                     _cookieconsent.hideSettings(0);
                     window.location.reload(true);
+                    _cookieconsent.show();
                 });
             }else{
                 new_settings_blocks = _createNode('div');
@@ -880,10 +884,12 @@
                 settings_buttons.appendChild(settings_accept_all_btn);
 
                 _addEvent(settings_accept_all_btn, 'click', function(){
-                    _cookieconsent.hideSettings();
-                    _cookieconsent.hide();
+                    _cookieconsent.accept([]);
                     _cookieconsent.accept('all');
                     listCookies();
+                    _cookieconsent.hideSettings();
+                    _cookieconsent.hide();
+
                 });
             }
 
@@ -901,6 +907,8 @@
 
                     _addEvent(settings_reject_all_btn, 'click', function(){
                         _cookieconsent.eraseCookies(['cc_cookie']);
+                        _cookieconsent.eraseCookies(['backgroundCounter']);
+                        _cookieconsent.eraseCookies(['backgroundCookie']);
                         //_cookieconsent.hideSettings();
                         listCookies();
                         window.location.reload(true);
