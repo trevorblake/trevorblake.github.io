@@ -300,6 +300,7 @@
             for(i=0; i<accept_necessary.length; i++){
                 _addEvent(accept_necessary[i], 'click', function(event){
                     _acceptAction(event, []);
+
                 });
             }
 
@@ -514,6 +515,8 @@
                         _addEvent(consent_secondary_btn, 'click', function(){
                             _cookieconsent.hide();
                             _cookieconsent.accept([]); // accept necessary only
+                            _cookieconsent.eraseCookies(['cc_cookies']);
+                            location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                         });
                     }else{
                         _addEvent(consent_secondary_btn, 'click', function(){
@@ -895,6 +898,8 @@
                         _cookieconsent.hideSettings();
                         _cookieconsent.hide();
                         _cookieconsent.accept([]);
+                        _cookieconsent.eraseCookies(['cc_cookies']);
+                        location.href = "https://pics.me.me/when-you-dont-accept-cookies-website-all-right-then-keep-37707669.png";
                     });
 
                     settings_inner.className = "bns-t";
