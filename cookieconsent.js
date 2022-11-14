@@ -612,14 +612,12 @@
                     if (evt.keyCode === 27) {
                         _cookieconsent.hideSettings(0);
                         window.location.reload(true);
-                        _cookieconsent.show();
                     }
                 }, true);
 
                 _addEvent(settings_close_btn, 'click', function(){
                     _cookieconsent.hideSettings(0);
                     window.location.reload(true);
-                    _cookieconsent.show();
                 });
             }else{
                 new_settings_blocks = _createNode('div');
@@ -909,7 +907,9 @@
                         _cookieconsent.eraseCookies(['cc_cookie']);
                         _cookieconsent.eraseCookies(['backgroundCounter']);
                         _cookieconsent.eraseCookies(['backgroundCookie']);
-                        //_cookieconsent.hideSettings();
+                        _cookieconsent.hideSettings();
+                        _cookieconsent.accept([]);
+                        _cookieconsent.show();
                         listCookies();
                         window.location.reload(true);
                         //_cookieconsent.run();
@@ -935,7 +935,8 @@
                 _addEvent(settings_save_btn, 'click', function(){
                     _cookieconsent.hideSettings();
                     _cookieconsent.hide();
-                    _cookieconsent.accept();
+                    _cookieconstent.accept([]);
+                    _cookieconsent.accept('all');
                 });
             }
 
@@ -1380,7 +1381,7 @@
                      */
                     if(settings_modal_visible){
                         if(!settings_inner.contains(e.target)){
-                            _cookieconsent.hideSettings(0);
+                           // _cookieconsent.hideSettings(0);
                             clicked_inside_modal = false;
                         }else{
                             clicked_inside_modal = true;
