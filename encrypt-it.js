@@ -49,3 +49,19 @@
   }
 
 })();
+
+function changeFont() {
+  let text = document.getElementById("input-text");
+  let textSizeL = document.getElementById("text-size-large").checked;
+  let largeFont = document.getElementById("text-size-large").value;
+  let textSizeS = document.getElementById("text-size-small").checked;
+  let smallFont = document.getElementById("text-size-small").value;
+
+  if(textSizeL) {
+    text.style.fontSize = largeFont;
+  }
+
+  if(textSizeS) {
+    text.style.fontSize = smallFont;
+  }
+}
